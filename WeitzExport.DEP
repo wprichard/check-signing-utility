@@ -1,0 +1,54 @@
+[Version]
+Version=1.0.0.7
+
+[WeitzExport.exe <0009>]
+Dest=$(AppPath)
+Date=4/30/2003
+Time=14:37
+Version=1.0.0.7
+CABFilename=WeitzExport.CAB
+CABINFFile=WeitzExport.INF
+Uses1=OTUsrSec.dll
+Uses2=OTSchema.dll
+Uses3=OTQUERY.dll
+Uses4=msado15.dll
+Uses5=OTExportManager.dll
+Uses6=OTDocId.dll
+Uses7=OTObjID.dll
+Uses8=WeitzExportUtility.dp6
+
+[OTUsrSec.dll <0009>]
+Dest=$(WinSysPath)
+Date=2/28/2002
+Time=15:33
+Version=2.3.0.0
+
+[OTSchema.dll <0009>]
+Dest=$(WinSysPath)
+Date=2/19/2002
+Time=00:30
+Version=2.3.0.0
+
+[OTQUERY.dll <0009>]
+Dest=$(WinSysPath)
+Date=2/19/2002
+Time=00:28
+Version=2.3.0.0
+
+[OTExportManager.dll <0009>]
+Dest=$(WinSysPath)
+Date=2/19/2002
+Time=00:22
+Version=2.3.0.0
+
+[OTDocId.dll <0009>]
+Dest=$(WinSysPath)
+Date=2/19/2002
+Time=00:21
+Version=2.3.0.0
+
+[OTObjID.dll <0009>]
+Dest=$(WinSysPath)
+Date=3/1/2002
+Time=16:37
+Version=2.3.0.0

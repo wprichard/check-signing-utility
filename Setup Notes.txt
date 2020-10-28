@@ -1,0 +1,20 @@
+The tool is deployed via DSMS to a client workstation. WeitzExportutility.dp6 is provided to support the DSMS deployment. The dependencies of the tool were analyzed to determine which DSMS groups were required to get all of the necessary dependencies downloaded to the client. The .dp6 file list the dependencies and the groups they are included in.
+
+An installer (Setup.exe) is also provided to install the tool and the .dp6 file in the DSMS Sourcefiles master folder for easy installation and removal.
+
+Make the following modification to the Setup.LST for installing to DSMS:
+
+Change this line:
+DefaultDir=$(ProgramFiles)\WeitzExport
+to this:
+DefaultDir=D:\AcordeSv\DSMS\SourceFiles\DSMS
+to have the files installed in the DSMS Master Directory.
+
+Change this line:
+File2=@MSCOMCTL.OCX,$(AppPath),$(DLLSelfRegister),,5/22/00 12:00:00 AM,1066176,6.0.88.62
+to this:
+File2=@MSCOMCTL.OCX,$(AppPath),,,5/22/00 12:00:00 AM,1066176,6.0.88.62
+so that MSCOMCTL.OCX will not be registered on the DSMS server.
+DSMS registers the file on the client when it installes it there.
+
+

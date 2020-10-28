@@ -1,0 +1,45 @@
+/*
+
+Distributed Software Management System (DSMS)
+			Dependency File
+----------------------------------------------
+
+Date: 6/May/2003
+
+This file deploys the Weitz Document Export utility via DSMS to clients.
+To install this tool use the following command:
+OptikaStartup /customtool=WeitzExport.exe
+
+WARNING: CHANGING ANY PORTION OF THIS FILE MAY RESULT IN FULL OR 
+PARTIAL FAILURE TO DOWNLOAD THE TOOL.
+
+Copyright (c) 2003  Optika, Inc. All Rights Reserved.
+
+Dependency list:
+msvbvm60.dll	contained in Group ToolkitContext
+OLEAUT32.dll	contained in Group Optika
+scrrun.dll	contained in Group Optika
+OTObjID.dll	contained in Group Optika
+OTUsrSec.dll	contained in Group Optika
+OTSchema.dll	contained in Group Optika
+OTQuery.dll	contained in Group Optika
+comdlg32.ocx	contained in Group ToolkitContext
+mscomctl.ocx	included by this file
+OptPage.ocx	contained in Group ToolkitViewer
+OLEPRO32.dll	PROVIDED BY wINDOWS
+ASYCFILT.DLL	PROVIDED BY wINDOWS
+STDOLE2.TLB	PROVIDED BY wINDOWS
+COMCAT.DLL	PROVIDED BY wINDOWS
+msado15.dll	PROVIDED BY wINDOWS
+added for billing backup:
+OTDocID.dll	contained in Group Optika
+OTExportManager.dll contained in Group ToolkitContext
+MSCOMCTL.OCX	provided by tool LOBMAPTool.dll in ERPB2B.dp5
+*/
+
+extend IBPM
+{
+	group ToolkitImaging
+	group ToolkitViewer
+	file "WeitzExport.exe"		register, verisonupdate
+}
