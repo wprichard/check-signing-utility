@@ -1,0 +1,19 @@
+Weitz Export Utility 2.1.x
+
+The setup program for the Weitz Export Utility is designed to install the necessary files (WeitzExport.exe and WeitzExportUtility.dp6) to the Acorde DSMS SourceFiles master folder. No files are registered. Once the files are installed to the SourceFiles master folder, the DSMS service will detect their presence within one minute.
+
+The export utility is automatically installed to a client workstation via DSMS whenever Optikastatup is run on the client. (This is different from version 1.0.x which used the following command at a command prompt on the client workstation:
+OptikaStartup /customtool=WeitzExport.exe
+The /customtool command is no longer required.)
+
+The utility is executed by running WeitzExport.exe on the client workstation.
+
+
+The Weitz Export utility has been compiled for and tested with Acorde 2.3.2. When Acorde is upgraded to a later version, the Acorde files used by the utility will be updated when the Acorde client is updated by DSMS. This could cause the Utility to stop working depending on changes to the supporting files. If this occurs, recompile the Utility with the current version of the Acorde SDK and replace the version in the SourceFiles master folder with the newly compiled version. You can then rerun
+OptikaStartup on the client to update the installation.
+
+Running the uninstaller on the DSMS server will remove the Weitz Export custom tool files from the DSMS master folder so that it will no longer be deployed to clients. Once the fiels ahve been removed from the DSMS server, the utility can also be removed from a client by running: 
+Optikastartup /clean
+
+If the Acorde system is upgraded and new DSMS source files are installed, the installer may need to be re-run to replace the custom tool in the DSMS Sourcefiles master folder.
+
